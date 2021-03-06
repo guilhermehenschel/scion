@@ -19,7 +19,7 @@ import { createWorldbuildingMacro } from "./macro.js";
  * Init hook.
  */
 Hooks.once("init", async function() {
-  console.log(`Initializing Simple Worldbuilding System`);
+  console.log(`Initializing SCION System`);
 
   /**
    * Set an initiative formula for the system. This will be updated later.
@@ -40,12 +40,12 @@ Hooks.once("init", async function() {
 
   // Register sheet application classes
   Actors.unregisterSheet("core", ActorSheet);
-  Actors.registerSheet("worldbuilding", SimpleActorSheet, { makeDefault: true });
+  Actors.registerSheet("scion", SimpleActorSheet, { makeDefault: true });
   Items.unregisterSheet("core", ItemSheet);
-  Items.registerSheet("worldbuilding", SimpleItemSheet, { makeDefault: true });
+  Items.registerSheet("scion", SimpleItemSheet, { makeDefault: true });
 
   // Register system settings
-  game.settings.register("worldbuilding", "macroShorthand", {
+  game.settings.register("scion", "macroShorthand", {
     name: "SETTINGS.SimpleMacroShorthandN",
     hint: "SETTINGS.SimpleMacroShorthandL",
     scope: "world",
@@ -55,7 +55,7 @@ Hooks.once("init", async function() {
   });
 
   // Register initiative setting.
-  game.settings.register("worldbuilding", "initFormula", {
+  game.settings.register("scion", "initFormula", {
     name: "SETTINGS.SimpleInitFormulaN",
     hint: "SETTINGS.SimpleInitFormulaL",
     scope: "world",
@@ -66,7 +66,7 @@ Hooks.once("init", async function() {
   });
 
   // Retrieve and assign the initiative formula setting.
-  const initFormula = game.settings.get("worldbuilding", "initFormula");
+  const initFormula = game.settings.get("scion", "initFormula");
   _simpleUpdateInit(initFormula);
 
   /**
@@ -118,11 +118,11 @@ Hooks.on("getActorDirectoryEntryContext", (html, options) => {
     icon: '<i class="fas fa-stamp"></i>',
     condition: li => {
       const actor = game.actors.get(li.data("entityId"));
-      return !actor.getFlag("worldbuilding", "isTemplate");
+      return !actor.getFlag("scion", "isTemplate");
     },
     callback: li => {
       const actor = game.actors.get(li.data("entityId"));
-      actor.setFlag("worldbuilding", "isTemplate", true);
+      actor.setFlag("scion", "isTemplate", true);
     }
   });
 
@@ -132,11 +132,11 @@ Hooks.on("getActorDirectoryEntryContext", (html, options) => {
     icon: '<i class="fas fa-times"></i>',
     condition: li => {
       const actor = game.actors.get(li.data("entityId"));
-      return actor.getFlag("worldbuilding", "isTemplate");
+      return actor.getFlag("scion", "isTemplate");
     },
     callback: li => {
       const actor = game.actors.get(li.data("entityId"));
-      actor.setFlag("worldbuilding", "isTemplate", false);
+      actor.setFlag("scion", "isTemplate", false);
     }
   });
 });
@@ -151,11 +151,11 @@ Hooks.on("getItemDirectoryEntryContext", (html, options) => {
     icon: '<i class="fas fa-stamp"></i>',
     condition: li => {
       const item = game.items.get(li.data("entityId"));
-      return !item.getFlag("worldbuilding", "isTemplate");
+      return !item.getFlag("scion", "isTemplate");
     },
     callback: li => {
       const item = game.items.get(li.data("entityId"));
-      item.setFlag("worldbuilding", "isTemplate", true);
+      item.setFlag("scion", "isTemplate", true);
     }
   });
 
@@ -165,11 +165,11 @@ Hooks.on("getItemDirectoryEntryContext", (html, options) => {
     icon: '<i class="fas fa-times"></i>',
     condition: li => {
       const item = game.items.get(li.data("entityId"));
-      return item.getFlag("worldbuilding", "isTemplate");
+      return item.getFlag("scion", "isTemplate");
     },
     callback: li => {
       const item = game.items.get(li.data("entityId"));
-      item.setFlag("worldbuilding", "isTemplate", false);
+      item.setFlag("scion", "isTemplate", false);
     }
   });
 });
@@ -199,7 +199,7 @@ async function _simpleDirectoryTemplates(collection, event) {
   // Retrieve the collection and find any available templates
   const entityCollection = collection.tabName === "actors" ? game.actors : game.items;
   const cls = collection.tabName === "actors" ? Actor : Item;
-  let templates = entityCollection.filter(a => a.getFlag("worldbuilding", "isTemplate"));
+  let templates = entityCollection.filter(a => a.getFlag("scion", "isTemplate"));
   let ent = game.i18n.localize(cls.config.label);
 
   // Setup default creation data
@@ -219,7 +219,7 @@ async function _simpleDirectoryTemplates(collection, event) {
 
   // Render the confirmation dialog window
   const templateData = {upper: ent, lower: ent.toLowerCase(), types: types};
-  const dlg = await renderTemplate(`systems/worldbuilding/templates/sidebar/entity-create.html`, templateData);
+  const dlg = await renderTemplate(`systems/scion/templates/sidebar/entity-create.html`, templateData);
   return Dialog.confirm({
     title: `${game.i18n.localize("SIMPLE.Create")} ${createData.name}`,
     content: dlg,

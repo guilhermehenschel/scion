@@ -1,4 +1,87 @@
 <section class="attributes-group">
+    <div>
+        <table style="width: 100%">
+            <tr>
+                <th></th>
+                <th>MENTAL</th>
+                <th>PHYSICAL</th>
+                <th>SOCIAL</th>
+            </tr>
+            <tr>
+                <th>POWER</th>
+                <td>
+                    <span class="attribute flexrow" style="width: 100%">
+                        <label class="attribute-value">Intellect</label>
+                        <label class="attribute-value checkbox"><input type="checkbox" name="data.attributes.intellect.approach" {{checked attributes.intellect.approach}} /></label>
+                        <label class="attribute-value"><input class="attribute-value" type="text" name="data.attributes.intellect.value" value="{{attributes.intellect.value}}" data-dtype="Number" placeholder="0"/><label>
+                    </span>
+                </td>
+                <td>
+                    <span class="attribute flexrow" style="width: 100%">
+                        <label class="attribute-value">Might</label>
+                        <label class="attribute-value checkbox"><input type="checkbox" name="data.attributes.might.approach" {{checked attributes.might.approach}} /></label>
+                        <label class="attribute-value"><input class="attribute-value" type="text" name="data.attributes.might.value" value="{{attributes.might.value}}" data-dtype="Number" placeholder="0"/><label>
+                    </span>
+                </td>
+                <td>
+                    <span class="attribute flexrow" style="width: 100%">
+                        <label class="attribute-value">Presence</label>
+                        <label class="attribute-value checkbox"><input type="checkbox" name="data.attributes.presence.approach" {{checked attributes.presence.approach}} /></label>
+                        <label class="attribute-value"><input class="attribute-value" type="text" name="data.attributes.presence.value" value="{{attributes.presence.value}}" data-dtype="Number" placeholder="0"/><label>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <th>Finesse</th>
+                <td>
+                    <span class="attribute flexrow" style="width: 100%">
+                        <label class="attribute-value">Cunning</label>
+                        <label class="attribute-value checkbox"><input type="checkbox" name="data.attributes.cunning.approach" {{checked attributes.cunning.approach}} /></label>
+                        <label class="attribute-value"><input class="attribute-value" type="text" name="data.attributes.cunning.value" value="{{attributes.cunning.value}}" data-dtype="Number" placeholder="0"/><label>
+                    </span>
+                </td>
+                <td>
+                    <span class="attribute flexrow" style="width: 100%">
+                        <label class="attribute-value">Dexterity</label>
+                        <label class="attribute-value checkbox"><input type="checkbox" name="data.attributes.dexterity.approach" {{checked attributes.dexterity.approach}} /></label>
+                        <label class="attribute-value"><input class="attribute-value" type="text" name="data.attributes.dexterity.value" value="{{attributes.dexterity.value}}" data-dtype="Number" placeholder="0"/><label>
+                    </span>
+                </td>
+                <td>
+                    <span class="attribute flexrow" style="width: 100%">
+                        <label class="attribute-value">Manipulation</label>
+                        <label class="attribute-value checkbox"><input type="checkbox" name="data.attributes.manipulation.approach" {{checked attributes.manipulation.approach}} /></label>
+                        <label class="attribute-value"><input class="attribute-value" type="text" name="data.attributes.manipulation.value" value="{{attributes.manipulation.value}}" data-dtype="Number" placeholder="0"/><label>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <th>Resilience</th>
+                <td>
+                    <span class="attribute flexrow" style="width: 100%">
+                        <label class="attribute-value">Resolve</label>
+                        <label class="attribute-value checkbox"><input type="checkbox" name="data.attributes.resolve.approach" {{checked attributes.resolve.approach}} /></label>
+                        <label class="attribute-value"><input class="attribute-value" type="text" name="data.attributes.resolve.value" value="{{attributes.resolve.value}}" data-dtype="Number" placeholder="0"/><label>
+                    </span>
+                </td>
+                <td>
+                    <span class="attribute flexrow" style="width: 100%">
+                        <label class="attribute-value">Stamina</label>
+                        <label class="attribute-value checkbox"><input type="checkbox" name="data.attributes.stamina.approach" {{checked attributes.stamina.approach}} /></label>
+                        <label class="attribute-value"><input class="attribute-value" type="text" name="data.attributes.stamina.value" value="{{attributes.stamina.value}}" data-dtype="Number" placeholder="0"/><label>
+                    </span>
+                </td>
+                <td>
+                    <span class="attribute flexrow" style="width: 100%">
+                        <label class="attribute-value">Composure</label>
+                        <label class="attribute-value checkbox"><input type="checkbox" name="data.attributes.composure.approach" {{checked attributes.composure.approach}} /></label>
+                        <label class="attribute-value"><input class="attribute-value" type="text" name="data.attributes.composure.value" value="{{attributes.composure.value}}" data-dtype="Number" placeholder="0"/><label>
+                    </span>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <!--
     <ol class="attributes-list">
         {{#each attributes as |attr key|}}
         <li class="attribute flexrow" data-attribute="{{#if attr.group}}{{attr.group}}.{{/if}}{{key}}">
@@ -52,4 +135,5 @@
         </li>
         {{/each}}
     </ol>
+    -->
 </section>

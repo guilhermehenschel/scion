@@ -2,19 +2,186 @@
 "Actor": {
   "types": ["character"],
   "character": {
+    "name": "",
+    "player": "",
+    "chronicle": "",
+    "parent": "",
     "biography": "",
-    "health": {
-      "value": 10,
-      "min": 0,
-      "max": 10
+    "skills": {
+      "academics":{
+        "value": 0,
+        "checked": false,
+        "speciality": ""
+      },
+      "athletics":{
+        "value": 0,
+        "checked": false,
+        "speciality": ""
+        
+      },
+      "close_combat":{
+        "value": 0,
+        "checked": false,
+        "speciality": ""
+      },
+      "culture":{
+        "value": 0,
+        "checked": false,
+        "speciality": ""
+      },
+      "empathy":{
+        "value": 0,
+        "checked": false,
+        "speciality": ""
+      },
+      "firearms":{
+        "value": 0,
+        "checked": false,
+        "speciality": ""
+      },
+      "integrity":{
+        "value": 0,
+        "checked": false,
+        "speciality": ""
+      },
+      "leadership":{
+        "value": 0,
+        "checked": false,
+        "speciality": ""
+      },
+      "medicine":{
+        "value": 0,
+        "checked": false,
+        "speciality": ""
+      },
+      "occult":{
+        "value": 0,
+        "checked": false,
+        "speciality": ""
+      },
+      "persuasion":{
+        "value": 0,
+        "checked": false,
+        "speciality": ""
+      },
+      "pilot":{
+        "value": 0,
+        "checked": false,
+        "speciality": ""
+      },
+      "science":{
+        "value": 0,
+        "checked": false,
+        "speciality": ""
+      },
+      "subterfuge":{
+        "value": 0,
+        "checked": false,
+        "speciality": ""
+      },
+      "survival":{
+        "value": 0,
+        "checked": false,
+        "speciality": ""
+      },
+      "technology":{
+        "value": 0,
+        "checked": false,
+        "speciality": ""
+      }
     },
-    "power": {
+    "attributes": {
+      "mental":{
+        "intellect":{
+          "value": 0,
+          "approach": false
+        },
+        "cunning":{
+          "value": 0,
+          "approach": false
+        },
+        "resolve":{
+          "value": 0,
+          "approach": false
+        }
+      },
+      "physical":{
+        "might":{
+          "value": 0,
+          "approach": false
+        },
+        "dexterity":{
+          "value": 0,
+          "approach": false
+        },
+        "stamina":{
+          "value": 0,
+          "approach": false
+        }
+      },
+      "social":{
+        "presence":{
+          "value": 0,
+          "approach": false
+        },
+        "manipulation":{
+          "value": 0,
+          "approach": false
+        },
+        "composure":{
+          "value": 0,
+          "approach": false
+        }
+      }
+    },
+    "paths": [
+      {
+        "text":"",
+        "checked": false
+      }
+    ],
+    "birthrights": [],
+    "deeds":{
+      "short":{
+        "text": "",
+        "checked": false
+      },
+      "long":{
+        "text": "",
+        "checked": false
+      },
+      "band":{
+        "text": "",
+        "checked": false
+      }
+    },
+    "contacts": [],
+    "virtue": {
+      "left": "",
+      "right": "",
+      "value": 0
+    },
+    "knacks": [],
+    "legend": {
+      "max":0,
+      "current":0
+    },
+    "momentum": 0,
+    "calling": [
+      {
+        "text": "",
+        "value": 0
+      }
+    ],
+    "boons": [""],
+    "purview": [""],
+    "movement_dice": "",
+    "defense_roll": "",
+    "health": {
       "value": 5,
       "min": 0,
       "max": 5
-    },
-    "attributes": {},
-    "groups": {}
+    }
   }
 },
 "Item": {

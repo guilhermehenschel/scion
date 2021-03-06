@@ -9,8 +9,8 @@ export class SimpleActorSheet extends ActorSheet {
   /** @override */
   static get defaultOptions() {
     return mergeObject(super.defaultOptions, {
-      classes: ["worldbuilding", "sheet", "actor"],
-      template: "systems/worldbuilding/templates/actor-sheet.html",
+      classes: ["scion", "sheet", "actor"],
+      template: "systems/scion/templates/actor-sheet.html",
       width: 600,
       height: 600,
       tabs: [{navSelector: ".sheet-tabs", contentSelector: ".sheet-body", initial: "description"}],
@@ -25,7 +25,7 @@ export class SimpleActorSheet extends ActorSheet {
   getData() {
     const data = super.getData();
     EntitySheetHelper.getAttributeData(data);
-    data.shorthand = !!game.settings.get("worldbuilding", "macroShorthand");
+    data.shorthand = !!game.settings.get("scion", "macroShorthand");
     return data;
   }
 
@@ -69,7 +69,7 @@ export class SimpleActorSheet extends ActorSheet {
     html.find(".attributes").on("click", ".attribute-control", EntitySheetHelper.onClickAttributeControl.bind(this));
 
     // Add attribute groups.
-    html.find(".groups").on("click", ".group-control", EntitySheetHelper.onClickAttributeGroupControl.bind(this));
+    // html.find(".groups").on("click", ".group-control", EntitySheetHelper.onClickAttributeGroupControl.bind(this));
   }
 
   /* -------------------------------------------- */

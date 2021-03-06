@@ -180,7 +180,7 @@ export class EntitySheetHelper {
     const button = event.currentTarget;
     const label = button.closest(".attribute").querySelector(".attribute-label")?.value;
     const chatLabel = label ?? button.parentElement.querySelector(".attribute-key").value;
-    const shorthand = game.settings.get("worldbuilding", "macroShorthand");
+    const shorthand = game.settings.get("scion", "macroShorthand");
     const rollData = this.object.getRollData();
     let formula = button.closest(".attribute").querySelector(".attribute-value")?.value;
 
@@ -418,58 +418,12 @@ export class EntitySheetHelper {
 
     // Handle the free-form attributes list
     const formAttrs = expandObject(formData).data.attributes || {};
-    const attributes = Object.values(formAttrs).reduce((obj, v) => {
-      let attrs = [];
-      let group = null;
-      // Handle attribute keys for grouped attributes.
-      if ( !v["key"] ) {
-        attrs = Object.keys(v);
-        attrs.forEach(attrKey => {
-          group = v[attrKey]['group'];
-          groupKeys.push(group);
-          let attr = v[attrKey];
-          let k = v[attrKey]["key"] ? v[attrKey]["key"].trim() : attrKey.trim();
-          if ( /[\s\.]/.test(k) )  return ui.notifications.error("Attribute keys may not contain spaces or periods");
-          delete attr["key"];
-          // Add the new attribute if it's grouped, but we need to build the nested structure first.
-          if ( !obj[group] ) {
-            obj[group] = {};
-          }
-          obj[group][k] = attr;
-        });
-      }
-      // Handle attribute keys for ungrouped attributes.
-      else {
-        let k = v["key"].trim();
-        if ( /[\s\.]/.test(k) )  return ui.notifications.error("Attribute keys may not contain spaces or periods");
-        delete v["key"];
-        // Add the new attribute only if it's ungrouped.
-        if ( !group ) {
-          obj[k] = v;
-        }
-      }
-      return obj;
-    }, {});
-
-    // Remove attributes which are no longer used
-    for ( let k of Object.keys(entity.object.data.data.attributes) ) {
-      if ( !attributes.hasOwnProperty(k) ) attributes[`-=${k}`] = null;
-    }
-
-    // Remove grouped attributes which are no longer used.
-    for ( let group of groupKeys) {
-      if ( entity.object.data.data.attributes[group] ) {
-        for ( let k of Object.keys(entity.object.data.data.attributes[group]) ) {
-          if ( !attributes[group].hasOwnProperty(k) ) attributes[group][`-=${k}`] = null;
-        }
-      }
-    }
 
     // Re-combine formData
     formData = Object.entries(formData).filter(e => !e[0].startsWith("data.attributes")).reduce((obj, e) => {
       obj[e[0]] = e[1];
       return obj;
-    }, {_id: entity.object._id, "data.attributes": attributes});
+    }, {_id: entity.object._id, "data.attributes": formAttrs});
 
     return formData;
   }
