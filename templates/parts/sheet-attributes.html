@@ -1,6 +1,6 @@
 <section class="attributes-group">
-    <div>
-        <table style="width: 100%">
+    <div class="scion">
+        <table>
             <tr>
                 <th></th>
                 <th>MENTAL</th>
@@ -11,129 +11,230 @@
                 <th>POWER</th>
                 <td>
                     <span class="attribute flexrow" style="width: 100%">
-                        <label class="attribute-value">Intellect</label>
-                        <label class="attribute-value checkbox"><input type="checkbox" name="data.attributes.intellect.approach" {{checked attributes.intellect.approach}} /></label>
-                        <label class="attribute-value"><input class="attribute-value" type="text" name="data.attributes.intellect.value" value="{{attributes.intellect.value}}" data-dtype="Number" placeholder="0"/><label>
+                        <label class="attribute-label">Intellect</label>
+                        <label class="attribute-check checkbox"><input type="checkbox" name="data.attributes.intellect.approach" {{checked data.attributes.intellect.approach}} /></label>
+                        <label class="attribute-value"><input class="attribute-value" type="text" name="data.attributes.intellect.value" value="{{data.attributes.intellect.value}}" data-dtype="Number" placeholder="0"/><label>
                     </span>
                 </td>
                 <td>
                     <span class="attribute flexrow" style="width: 100%">
-                        <label class="attribute-value">Might</label>
-                        <label class="attribute-value checkbox"><input type="checkbox" name="data.attributes.might.approach" {{checked attributes.might.approach}} /></label>
-                        <label class="attribute-value"><input class="attribute-value" type="text" name="data.attributes.might.value" value="{{attributes.might.value}}" data-dtype="Number" placeholder="0"/><label>
+                        <label class="attribute-label">Might</label>
+                        <label class="attribute-check checkbox"><input type="checkbox" name="data.attributes.might.approach" {{checked data.attributes.might.approach}} /></label>
+                        <label class="attribute-value"><input class="attribute-value" type="text" name="data.attributes.might.value" value="{{data.attributes.might.value}}" data-dtype="Number" placeholder="0"/><label>
                     </span>
                 </td>
                 <td>
                     <span class="attribute flexrow" style="width: 100%">
-                        <label class="attribute-value">Presence</label>
-                        <label class="attribute-value checkbox"><input type="checkbox" name="data.attributes.presence.approach" {{checked attributes.presence.approach}} /></label>
-                        <label class="attribute-value"><input class="attribute-value" type="text" name="data.attributes.presence.value" value="{{attributes.presence.value}}" data-dtype="Number" placeholder="0"/><label>
-                    </span>
-                </td>
-            </tr>
-            <tr>
-                <th>Finesse</th>
-                <td>
-                    <span class="attribute flexrow" style="width: 100%">
-                        <label class="attribute-value">Cunning</label>
-                        <label class="attribute-value checkbox"><input type="checkbox" name="data.attributes.cunning.approach" {{checked attributes.cunning.approach}} /></label>
-                        <label class="attribute-value"><input class="attribute-value" type="text" name="data.attributes.cunning.value" value="{{attributes.cunning.value}}" data-dtype="Number" placeholder="0"/><label>
-                    </span>
-                </td>
-                <td>
-                    <span class="attribute flexrow" style="width: 100%">
-                        <label class="attribute-value">Dexterity</label>
-                        <label class="attribute-value checkbox"><input type="checkbox" name="data.attributes.dexterity.approach" {{checked attributes.dexterity.approach}} /></label>
-                        <label class="attribute-value"><input class="attribute-value" type="text" name="data.attributes.dexterity.value" value="{{attributes.dexterity.value}}" data-dtype="Number" placeholder="0"/><label>
-                    </span>
-                </td>
-                <td>
-                    <span class="attribute flexrow" style="width: 100%">
-                        <label class="attribute-value">Manipulation</label>
-                        <label class="attribute-value checkbox"><input type="checkbox" name="data.attributes.manipulation.approach" {{checked attributes.manipulation.approach}} /></label>
-                        <label class="attribute-value"><input class="attribute-value" type="text" name="data.attributes.manipulation.value" value="{{attributes.manipulation.value}}" data-dtype="Number" placeholder="0"/><label>
+                        <label class="attribute-label">Presence</label>
+                        <label class="attribute-check checkbox"><input type="checkbox" name="data.attributes.presence.approach" {{checked data.attributes.presence.approach}} /></label>
+                        <label class="attribute-value"><input class="attribute-value" type="text" name="data.attributes.presence.value" value="{{data.attributes.presence.value}}" data-dtype="Number" placeholder="0"/><label>
                     </span>
                 </td>
             </tr>
             <tr>
-                <th>Resilience</th>
+                <th>FINESSE</th>
                 <td>
                     <span class="attribute flexrow" style="width: 100%">
-                        <label class="attribute-value">Resolve</label>
-                        <label class="attribute-value checkbox"><input type="checkbox" name="data.attributes.resolve.approach" {{checked attributes.resolve.approach}} /></label>
-                        <label class="attribute-value"><input class="attribute-value" type="text" name="data.attributes.resolve.value" value="{{attributes.resolve.value}}" data-dtype="Number" placeholder="0"/><label>
+                        <label class="attribute-label">Cunning</label>
+                        <label class="attribute-check checkbox"><input type="checkbox" name="data.attributes.cunning.approach" {{checked data.attributes.cunning.approach}} /></label>
+                        <label class="attribute-value"><input class="attribute-value" type="text" name="data.attributes.cunning.value" value="{{data.attributes.cunning.value}}" data-dtype="Number" placeholder="0"/><label>
                     </span>
                 </td>
                 <td>
                     <span class="attribute flexrow" style="width: 100%">
-                        <label class="attribute-value">Stamina</label>
-                        <label class="attribute-value checkbox"><input type="checkbox" name="data.attributes.stamina.approach" {{checked attributes.stamina.approach}} /></label>
-                        <label class="attribute-value"><input class="attribute-value" type="text" name="data.attributes.stamina.value" value="{{attributes.stamina.value}}" data-dtype="Number" placeholder="0"/><label>
+                        <label class="attribute-label">Dexterity</label>
+                        <label class="attribute-check checkbox"><input type="checkbox" name="data.attributes.dexterity.approach" {{checked data.attributes.dexterity.approach}} /></label>
+                        <label class="attribute-value"><input class="attribute-value" type="text" name="data.attributes.dexterity.value" value="{{data.attributes.dexterity.value}}" data-dtype="Number" placeholder="0"/><label>
                     </span>
                 </td>
                 <td>
                     <span class="attribute flexrow" style="width: 100%">
-                        <label class="attribute-value">Composure</label>
-                        <label class="attribute-value checkbox"><input type="checkbox" name="data.attributes.composure.approach" {{checked attributes.composure.approach}} /></label>
-                        <label class="attribute-value"><input class="attribute-value" type="text" name="data.attributes.composure.value" value="{{attributes.composure.value}}" data-dtype="Number" placeholder="0"/><label>
+                        <label class="attribute-label">Manipulation</label>
+                        <label class="attribute-check checkbox"><input type="checkbox" name="data.attributes.manipulation.approach" {{checked data.attributes.manipulation.approach}} /></label>
+                        <label class="attribute-value"><input class="attribute-value" type="text" name="data.attributes.manipulation.value" value="{{data.attributes.manipulation.value}}" data-dtype="Number" placeholder="0"/><label>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <th>RESILIENCE</th>
+                <td>
+                    <span class="attribute flexrow" style="width: 100%">
+                        <label class="attribute-label">Resolve</label>
+                        <label class="attribute-check checkbox"><input type="checkbox" name="data.attributes.resolve.approach" {{checked data.attributes.resolve.approach}} /></label>
+                        <label class="attribute-value"><input class="attribute-value" type="text" name="data.attributes.resolve.value" value="{{data.attributes.resolve.value}}" data-dtype="Number" placeholder="0"/><label>
+                    </span>
+                </td>
+                <td>
+                    <span class="attribute flexrow" style="width: 100%">
+                        <label class="attribute-label">Stamina</label>
+                        <label class="attribute-check checkbox"><input type="checkbox" name="data.attributes.stamina.approach" {{checked data.attributes.stamina.approach}} /></label>
+                        <label class="attribute-value"><input class="attribute-value" type="text" name="data.attributes.stamina.value" value="{{data.attributes.stamina.value}}" data-dtype="Number" placeholder="0"/><label>
+                    </span>
+                </td>
+                <td>
+                    <span class="attribute flexrow" style="width: 100%">
+                        <label class="attribute-label">Composure</label>
+                        <label class="attribute-check checkbox"><input type="checkbox" name="data.attributes.composure.approach" {{checked data.attributes.composure.approach}} /></label>
+                        <label class="attribute-value"><input class="attribute-value" type="text" name="data.attributes.composure.value" value="{{data.attributes.composure.value}}" data-dtype="Number" placeholder="0"/><label>
                     </span>
                 </td>
             </tr>
         </table>
     </div>
-    <!--
-    <ol class="attributes-list">
-        {{#each attributes as |attr key|}}
-        <li class="attribute flexrow" data-attribute="{{#if attr.group}}{{attr.group}}.{{/if}}{{key}}">
-            <div class="attribute-key-wrapper flexrow">
-                {{#if attr.isFormula}}
-                    <a class="attribute-roll" data-label="{{attr.label}}" data-roll="{{attr.value}}"><i class="fas fa-dice-d20"></i></a>
-                {{/if}}
-                <input class="attribute-key" type="text" name="data.attributes.{{#if attr.group}}{{attr.group}}.{{/if}}{{key}}.key" value="{{key}}" placeholder="{{localize "SIMPLE.AttributeKey"}}"/>
-            </div>
-            {{!-- Handle booleans. --}}
-            {{#if attr.isCheckbox}}
-            <label class="attribute-value checkbox"><input type="checkbox" name="data.attributes.{{#if attr.group}}{{attr.group}}.{{/if}}{{key}}.value"
-                    {{checked attr.value}} /></label>
-            {{else}}
-            {{!-- Handle resources. --}}
-            {{#if attr.isResource}}
-            <div class="attribute-group flexrow">
-                <span class="attribute-col flexcol">
-                    <label for="data.attributes.{{#if attr.group}}{{attr.group}}.{{/if}}{{key}}.min">{{localize "SIMPLE.ResourceMin"}}</label>
-                    <input class="attribute-value" type="text" name="data.attributes.{{#if attr.group}}{{attr.group}}.{{/if}}{{key}}.min" value="{{attr.min}}"
-                        data-dtype="Number" />
-                </span>
-                <span class="attribute-col flexcol">
-                    <label for="data.attributes.{{#if attr.group}}{{attr.group}}.{{/if}}{{key}}.value">{{localize "SIMPLE.ResourceValue"}}</label>
-                    <input class="attribute-value" type="text" name="data.attributes.{{#if attr.group}}{{attr.group}}.{{/if}}{{key}}.value"
-                        value="{{attr.value}}" data-dtype="Number" />
-                </span>
-                <span class="attribute-col flexcol">
-                    <label for="data.attributes.{{#if attr.group}}{{attr.group}}.{{/if}}{{key}}.max">{{localize "SIMPLE.ResourceMax"}}</label>
-                    <input class="attribute-value" type="text" name="data.attributes.{{#if attr.group}}{{attr.group}}.{{/if}}{{key}}.max" value="{{attr.max}}"
-                        data-dtype="Number" />
-                </span>
-            </div>
-            {{!-- Handle other input types. --}}
-            {{else}}
-            <input class="attribute-value" type="text" name="data.attributes.{{#if attr.group}}{{attr.group}}.{{/if}}{{key}}.value" value="{{attr.value}}"
-                data-dtype="{{attr.dtype}}" placeholder="{{localize "SIMPLE.AttributeValue"}}"/>
-            {{/if}}
-            {{/if}}
-            <input class="attribute-label" type="text" name="data.attributes.{{#if attr.group}}{{attr.group}}.{{/if}}{{key}}.label" value="{{attr.label}}"
-                placeholder="{{localize "SIMPLE.AttributeLabel"}}"/>
-            <select class="attribute-dtype" name="data.attributes.{{#if attr.group}}{{attr.group}}.{{/if}}{{key}}.dtype">
-                {{#select attr.dtype}}
-                {{#each ../dtypes as |t|}}
-                <option value="{{t}}">{{t}}</option>
-                {{/each}}
-                {{/select}}
-            </select>
-            <input type="hidden" name="data.attributes.{{#if attr.group}}{{attr.group}}.{{/if}}{{key}}.group" value="{{attr.group}}" />
-            <a class="attribute-control" data-action="delete"><i class="fas fa-trash"></i></a>
-        </li>
-        {{/each}}
-    </ol>
-    -->
+    <div>
+        <table>
+            <tr>
+                <td>
+                    <span class="attribute flexrow" style="width: 100%">
+                        <label class="attribute-check checkbox"><input type="checkbox" name="data.skills.academics.checked" {{checked data.skills.academics.checked}} /></label>
+                        <label class="attribute-label">Academics</label>
+                        <label class="attribute-value"><input class="attribute-value" type="text" name="data.skills.academics.speciality" value="{{data.skills.academics.speciality}}" data-dtype="String" placeholder=""/></label>
+                        <label class="attribute-value"><input class="attribute-value" type="text" name="data.skills.academics.value" value="{{data.skills.academics.value}}" data-dtype="Number" placeholder="0"/><label>
+                    </span>
+                </td>
+                <td></td>
+                <td>
+                    <span class="attribute flexrow" style="width: 100%">
+                        <label class="attribute-check checkbox"><input type="checkbox" name="data.skills.medicine.checked" {{checked data.skills.medicine.checked}} /></label>
+                        <label class="attribute-label">Medicine</label>
+                        <label class="attribute-value"><input class="attribute-value" type="text" name="data.skills.medicine.speciality" value="{{data.skills.medicine.speciality}}" data-dtype="String" placeholder=""/></label>
+                        <label class="attribute-value"><input class="attribute-value" type="text" name="data.skills.medicine.value" value="{{data.skills.medicine.value}}" data-dtype="Number" placeholder="0"/><label>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span class="attribute flexrow" style="width: 100%">
+                        <label class="attribute-check checkbox"><input type="checkbox" name="data.skills.athletics.checked" {{checked data.skills.athletics.checked}} /></label>
+                        <label class="attribute-label">Athletics</label>
+                        <label class="attribute-value"><input class="attribute-value" type="text" name="data.skills.athletics.speciality" value="{{data.skills.athletics.speciality}}" data-dtype="String" placeholder=""/></label>
+                        <label class="attribute-value"><input class="attribute-value" type="text" name="data.skills.athletics.value" value="{{data.skills.athletics.value}}" data-dtype="Number" placeholder="0"/><label>
+                    </span>
+                </td>
+                <td></td>
+                <td>
+                    <span class="attribute flexrow" style="width: 100%">
+                        <label class="attribute-check checkbox"><input type="checkbox" name="data.skills.occult.checked" {{checked data.skills.occult.checked}} /></label>
+                        <label class="attribute-label">Occult</label>
+                        <label class="attribute-value"><input class="attribute-value" type="text" name="data.skills.occult.speciality" value="{{data.skills.occult.speciality}}" data-dtype="String" placeholder=""/></label>
+                        <label class="attribute-value"><input class="attribute-value" type="text" name="data.skills.occult.value" value="{{data.skills.occult.value}}" data-dtype="Number" placeholder="0"/><label>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span class="attribute flexrow" style="width: 100%">
+                        <label class="attribute-check checkbox"><input type="checkbox" name="data.skills.close_combat.checked" {{checked data.skills.close_combat.checked}} /></label>
+                        <label class="attribute-label">Close Combat</label>
+                        <label class="attribute-value"><input class="attribute-value" type="text" name="data.skills.close_combat.speciality" value="{{data.skills.close_combat.speciality}}" data-dtype="String" placeholder="" /></label>
+                        <label class="attribute-value"><input class="attribute-value" type="text" name="data.skills.close_combat.value" value="{{data.skills.close_combat.value}}" data-dtype="Number" placeholder="0"/><label>
+                    </span>
+                </td>
+                <td></td>
+                <td>
+                    <span class="attribute flexrow" style="width: 100%">
+                        <label class="attribute-check checkbox"><input type="checkbox" name="data.skills.persuasion.checked" {{checked data.skills.persuasion.checked}} /></label>
+                        <label class="attribute-label">Persuasion</label>
+                        <label class="attribute-value"><input class="attribute-value" type="text" name="data.skills.persuasion.speciality" value="{{data.skills.persuasion.speciality}}" data-dtype="String" placeholder=""/></label>
+                        <label class="attribute-value"><input class="attribute-value" type="text" name="data.skills.persuasion.value" value="{{data.skills.persuasion.value}}" data-dtype="Number" placeholder="0"/><label>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span class="attribute flexrow" style="width: 100%">
+                        <label class="attribute-check checkbox"><input type="checkbox" name="data.skills.culture.checked" {{checked data.skills.culture.checked}} /></label>
+                        <label class="attribute-label">Culture</label>
+                        <label class="attribute-value"><input class="attribute-value" type="text" name="data.skills.culture.speciality" value="{{data.skills.culture.speciality}}" data-dtype="String" placeholder="" /></label>
+                        <label class="attribute-value"><input class="attribute-value" type="text" name="data.skills.culture.value" value="{{data.skills.culture.value}}" data-dtype="Number" placeholder="0"/><label>
+                    </span>
+                </td>
+                <td></td>
+                <td>
+                    <span class="attribute flexrow" style="width: 100%">
+                        <label class="attribute-check checkbox"><input type="checkbox" name="data.skills.pilot.checked" {{checked data.skills.pilot.checked}} /></label>
+                        <label class="attribute-label">Pilot</label>
+                        <label class="attribute-value"><input class="attribute-value" type="text" name="data.skills.pilot.speciality" value="{{data.skills.pilot.speciality}}" data-dtype="String" placeholder=""/></label>
+                        <label class="attribute-value"><input class="attribute-value" type="text" name="data.skills.pilot.value" value="{{data.skills.pilot.value}}" data-dtype="Number" placeholder="0"/><label>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span class="attribute flexrow" style="width: 100%">
+                        <label class="attribute-check checkbox"><input type="checkbox" name="data.skills.empathy.checked" {{checked data.skills.empathy.checked}} /></label>
+                        <label class="attribute-label">Empathy</label>
+                        <label class="attribute-value"><input class="attribute-value" type="text" name="data.skills.empathy.speciality" value="{{data.skills.empathy.speciality}}" data-dtype="String" placeholder="" /></label>
+                        <label class="attribute-value"><input class="attribute-value" type="text" name="data.skills.empathy.value" value="{{data.skills.empathy.value}}" data-dtype="Number" placeholder="0"/><label>
+                    </span>
+                </td>
+                <td></td>
+                <td>
+                    <span class="attribute flexrow" style="width: 100%">
+                        <label class="attribute-check checkbox"><input type="checkbox" name="data.skills.science.checked" {{checked data.skills.science.checked}} /></label>
+                        <label class="attribute-label">science</label>
+                        <label class="attribute-value"><input class="attribute-value" type="text" name="data.skills.science.speciality" value="{{data.skills.science.speciality}}" data-dtype="String" placeholder=""/></label>
+                        <label class="attribute-value"><input class="attribute-value" type="text" name="data.skills.science.value" value="{{data.skills.science.value}}" data-dtype="Number" placeholder="0"/><label>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span class="attribute flexrow" style="width: 100%">
+                        <label class="attribute-check checkbox"><input type="checkbox" name="data.skills.firearms.checked" {{checked data.skills.firearms.checked}} /></label>
+                        <label class="attribute-label">Firearms</label>
+                        <label class="attribute-value"><input class="attribute-value" type="text" name="data.skills.firearms.speciality" value="{{data.skills.firearms.speciality}}" data-dtype="String" placeholder="" data-dtype="String" placeholder=""/></label>
+                        <label class="attribute-value"><input class="attribute-value" type="text" name="data.skills.firearms.value" value="{{data.skills.firearms.value}}" data-dtype="Number" placeholder="0"/><label>
+                    </span>
+                </td>
+                <td></td>
+                <td>
+                    <span class="attribute flexrow" style="width: 100%">
+                        <label class="attribute-check checkbox"><input type="checkbox" name="data.skills.subterfuge.checked" {{checked data.skills.subterfuge.checked}} /></label>
+                        <label class="attribute-label">Subterfuge</label>
+                        <label class="attribute-value"><input class="attribute-value" type="text" name="data.skills.subterfuge.speciality" value="{{data.skills.subterfuge.speciality}}" data-dtype="String" placeholder=""/></label>
+                        <label class="attribute-value"><input class="attribute-value" type="text" name="data.skills.subterfuge.value" value="{{data.skills.subterfuge.value}}" data-dtype="Number" placeholder="0"/><label>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span class="attribute flexrow" style="width: 100%">
+                        <label class="attribute-check checkbox"><input type="checkbox" name="data.skills.integrity.checked" {{checked data.skills.integrity.checked}} /></label>
+                        <label class="attribute-label">Integrity</label>
+                        <label class="attribute-value"><input class="attribute-value" type="text" name="data.skills.integrity.speciality" value="{{data.skills.integrity.speciality}}" data-dtype="String" placeholder=""/></label>
+                        <label class="attribute-value"><input class="attribute-value" type="text" name="data.skills.integrity.value" value="{{data.skills.integrity.value}}" data-dtype="Number" placeholder="0"/><label>
+                    </span>
+                </td>
+                <td></td>
+                <td>
+                    <span class="attribute flexrow" style="width: 100%">
+                        <label class="attribute-check checkbox"><input type="checkbox" name="data.skills.survival.checked" {{checked data.skills.survival.checked}} /></label>
+                        <label class="attribute-label">Survival</label>
+                        <label class="attribute-value"><input class="attribute-value" type="text" name="data.skills.survival.speciality" value="{{data.skills.survival.speciality}}" data-dtype="String" placeholder=""/></label>
+                        <label class="attribute-value"><input class="attribute-value" type="text" name="data.skills.survival.value" value="{{data.skills.survival.value}}" data-dtype="Number" placeholder="0"/><label>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span class="attribute flexrow" style="width: 100%">
+                        <label class="attribute-check checkbox"><input type="checkbox" name="data.skills.leadership.checked" {{checked data.skills.leadership.checked}} /></label>
+                        <label class="attribute-label">Leadership</label>
+                        <label class="attribute-value"><input class="attribute-value" type="text" name="data.skills.leadership.speciality" value="{{data.skills.leadership.speciality}}" data-dtype="String" placeholder=""/></label>
+                        <label class="attribute-value"><input class="attribute-value" type="text" name="data.skills.leadership.value" value="{{data.skills.leadership.value}}" data-dtype="Number" placeholder="0"/><label>
+                    </span>
+                </td>
+                <td></td>
+                <td>
+                    <span class="attribute flexrow" style="width: 100%">
+                        <label class="attribute-check checkbox"><input type="checkbox" name="data.skills.technology.checked" {{checked data.skills.technology.checked}} /></label>
+                        <label class="attribute-label">Technology</label>
+                        <label class="attribute-value"><input class="attribute-value" type="text" name="data.skills.technology.speciality" value="{{data.skills.technology.speciality}}" data-dtype="String" placeholder=""/></label>
+                        <label class="attribute-value"><input class="attribute-value" type="text" name="data.skills.technology.value" value="{{data.skills.technology.value}}" data-dtype="Number" placeholder="0"/><label>
+                    </span>
+                </td>
+            </tr>
+        </table>
+    </div>
 </section>

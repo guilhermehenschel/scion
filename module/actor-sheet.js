@@ -24,8 +24,11 @@ export class SimpleActorSheet extends ActorSheet {
   /** @override */
   getData() {
     const data = super.getData();
-    EntitySheetHelper.getAttributeData(data);
-    data.shorthand = !!game.settings.get("scion", "macroShorthand");
+
+    data.config = CONFIG.scion;
+
+    // EntitySheetHelper.getAttributeData(data);
+    // data.shorthand = !!game.settings.get("scion", "macroShorthand");
     return data;
   }
 

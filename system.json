@@ -7,8 +7,8 @@
   "compatibleCoreVersion": "0.7.9",
   "templateVersion": 2,
   "author": "ggHenschel",
-  "esmodules": ["module/simple.js"],
-  "styles": ["styles/simple.css"],
+  "esmodules": ["module/scion.js"],
+  "styles": ["styles/simple.css","styles/scion.css"],
   "packs": [],
   "languages": [
     {

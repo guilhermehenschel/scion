@@ -5,24 +5,17 @@
         <img class="profile-img" src="{{actor.img}}" data-edit="img" title="{{actor.name}}" height="100" width="100" />
         <div class="header-fields">
             <h1 class="charname"><input name="name" type="text" value="{{actor.name}}" placeholder="Name" /></h1>
-            <div class="resource">
-                <input type="text" name="data.health.value" value="{{data.health.value}}" data-dtype="Number" />
-                <span> / </span>
-                <input type="text" name="data.health.max" value="{{data.health.max}}" data-dtype="Number" />
-            </div>
-            <div class="resource">
-                <input type="text" name="data.power.value" value="{{data.power.value}}" data-dtype="Number" />
-                <span> / </span>
-                <input type="text" name="data.power.max" value="{{data.power.max}}" data-dtype="Number" />
-            </div>
+            <span class="scion header flexrow">
+                <label class="header-label">Parent</label><input type="text" name="data.power" value="{{data.parent}}" data-dtype="String" />
+            </span>
         </div>
     </header>
 
     {{!-- Sheet Tab Navigation --}}
     <nav class="sheet-tabs tabs" data-group="primary">
         <a class="item" data-tab="description">Description</a>
+        <a class="item" data-tab="attributes">Attributes & Skills</a>
         <a class="item" data-tab="items">Items</a>
-        <a class="item" data-tab="attributes">Attributes</a>
     </nav>
 
     {{!-- Sheet Body --}}
@@ -85,16 +78,8 @@
 
         {{!-- Attributes Tab --}}
         <div class="tab attributes" data-group="primary" data-tab="attributes">
-            <header class="attributes-header flexrow">
-                <span class="attribute-key">{{localize "SIMPLE.AttributeKey"}}</span>
-                <span class="attribute-value">{{localize "SIMPLE.AttributeValue"}}</span>
-                <span class="attribute-label">{{localize "SIMPLE.AttributeLabel"}}</span>
-                <span class="attribute-dtype">{{localize "SIMPLE.AttributeDtype"}}</span>
-                <a class="attribute-control" data-action="create" data-group="{{group}}"><i class="fas fa-plus"></i></a>
-            </header>
-
             {{!-- Render the attribute list partial. --}}
-            {{> "systems/scion/templates/parts/sheet-attributes.html" attributes=data.ungroupedAttributes dtypes=dtypes}}
+            {{> "systems/scion/templates/parts/sheet-attributes.html"}}
         </div>
     </section>
 </form>

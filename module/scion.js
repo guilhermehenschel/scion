@@ -10,6 +10,7 @@ import { SimpleItemSheet } from "./item-sheet.js";
 import { SimpleActorSheet } from "./actor-sheet.js";
 import { preloadHandlebarsTemplates } from "./templates.js";
 import { createWorldbuildingMacro } from "./macro.js";
+import { scion } from "./config.js"
 
 /* -------------------------------------------- */
 /*  Foundry VTT Initialization                  */
@@ -25,6 +26,7 @@ Hooks.once("init", async function() {
    * Set an initiative formula for the system. This will be updated later.
    * @type {String}
    */
+  CONFIG.scion = scion;
   CONFIG.Combat.initiative = {
     formula: "1d20",
     decimals: 2

@@ -2,8 +2,6 @@
 "Actor": {
   "types": ["character"],
   "character": {
-    "name": "",
-    "player": "",
     "chronicle": "",
     "parent": "",
     "biography": "",
